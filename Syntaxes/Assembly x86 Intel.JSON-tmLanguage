@@ -1,6 +1,6 @@
 { "name": "Assembly x86 Intel (FASM)",
   "scopeName": "source.asm",
-  "fileTypes": ["asm", "ASM", "inc", "INC"],
+  "fileTypes": ["asm", "ASM", "inc", "INC", "s", "S"],
   "patterns": [
     { 
       "name": "support.class.8086/8088",

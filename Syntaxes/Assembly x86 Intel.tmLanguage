@@ -8,6 +8,8 @@
 		<string>ASM</string>
 		<string>inc</string>
 		<string>INC</string>
+		<string>s</string>
+		<string>S</string>
 	</array>
 	<key>name</key>
 	<string>Assembly x86 Intel (FASM)</string>

@@ -12,7 +12,7 @@
 		<string>S</string>
 	</array>
 	<key>name</key>
-	<string>Assembly x86 Intel (FASM)</string>
+	<string>Assembly x86 (FASM)</string>
 	<key>patterns</key>
 	<array>
 		<dict>

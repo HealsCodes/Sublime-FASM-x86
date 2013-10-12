@@ -1,4 +1,4 @@
-{ "name": "Assembly x86 Intel (FASM)",
+{ "name": "Assembly x86 (FASM)",
   "scopeName": "source.asm",
   "fileTypes": ["asm", "ASM", "inc", "INC", "s", "S"],
   "patterns": [

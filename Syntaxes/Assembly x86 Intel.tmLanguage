@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE plist PUBLIC "-//Apple Computer//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
 	<key>fileTypes</key>
@@ -379,7 +379,7 @@
 			<key>comment</key>
 			<string>Names Pseudo Instructions case insensitive</string>
 			<key>match</key>
-			<string>\b(?i:format|format\s+(MZ|PE|ELF32|ELF64|COFF|MS\s+COFF|MS64\s+COFF)|use16|use32|use64|heap|stack|entry|local|section|segment|data|end\s+data|readable|writeable|executable|interpreter|shareable|discardable|notpageable|linkremove|linkinfo|dynamic|note|fixups|resource\s+from|rva|extrn|public|plt)\b</string>
+			<string>\b(?i:format|format\s+(MZ|PE|ELF32|ELF64|COFF|MS\s+COFF|MS64\s+COFF)|use16|use32|use64|heap|stack|entry|local|section|segment|data|end\s+data|readable|writeable|executable|interpreter|shareable|discardable|notpageable|linkremove|linkinfo|dynamic|note|display|fixups|resource\s+from|rva|extrn|public|plt)\b</string>
 			<key>name</key>
 			<string>entity.name.function.directives</string>
 		</dict>
@@ -421,6 +421,54 @@
 				<key>1</key>
 				<dict>
 					<key>name</key>
+					<string>constant.numeric.float</string>
+				</dict>
+			</dict>
+			<key>comment</key>
+			<string>Float numbers format: 1f</string>
+			<key>match</key>
+			<string>\b([0-9]+f)\b</string>
+			<key>name</key>
+			<string>constant.numeric.float</string>
+		</dict>
+		<dict>
+			<key>captures</key>
+			<dict>
+				<key>1</key>
+				<dict>
+					<key>name</key>
+					<string>constant.numeric.float</string>
+				</dict>
+			</dict>
+			<key>comment</key>
+			<string>Float numbers format: 1.0</string>
+			<key>match</key>
+			<string>[^\w\d]([0-9]+\.[0-9]+)\b</string>
+			<key>name</key>
+			<string>constant.numeric.float</string>
+		</dict>
+		<dict>
+			<key>captures</key>
+			<dict>
+				<key>1</key>
+				<dict>
+					<key>name</key>
+					<string>constant.numeric.float</string>
+				</dict>
+			</dict>
+			<key>comment</key>
+			<string>Float numbers format: 1e0</string>
+			<key>match</key>
+			<string>\b([0-9]+(e|E)[0-9]+)\b</string>
+			<key>name</key>
+			<string>constant.numeric.float</string>
+		</dict>
+		<dict>
+			<key>captures</key>
+			<dict>
+				<key>1</key>
+				<dict>
+					<key>name</key>
 					<string>constant.numeric.hex</string>
 				</dict>
 			</dict>
@@ -444,6 +492,22 @@
 			<string>Exadecimal numbers format: FFh</string>
 			<key>match</key>
 			<string>\b([0-9a-fA-F]+(h|H))\b</string>
+			<key>name</key>
+			<string>constant.numeric.hex</string>
+		</dict>
+		<dict>
+			<key>captures</key>
+			<dict>
+				<key>1</key>
+				<dict>
+					<key>name</key>
+					<string>constant.numeric.hex</string>
+				</dict>
+			</dict>
+			<key>comment</key>
+			<string>Exadecimal numbers format: $FF</string>
+			<key>match</key>
+			<string>[^\w\d](\$[0-9a-fA-F]+)\b</string>
 			<key>name</key>
 			<string>constant.numeric.hex</string>
 		</dict>

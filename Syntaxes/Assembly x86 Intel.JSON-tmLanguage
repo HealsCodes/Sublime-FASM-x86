@@ -180,7 +180,7 @@
     },
 
     { "name": "entity.name.function.directives",
-      "match": "\\b(?i:format|format\\s+(MZ|PE|ELF32|ELF64|COFF|MS\\s+COFF|MS64\\s+COFF)|use16|use32|use64|heap|stack|entry|local|section|segment|data|end\\s+data|readable|writeable|executable|interpreter|shareable|discardable|notpageable|linkremove|linkinfo|dynamic|note|fixups|resource\\s+from|rva|extrn|public|plt)\\b",
+      "match": "\\b(?i:format|format\\s+(MZ|PE|ELF32|ELF64|COFF|MS\\s+COFF|MS64\\s+COFF)|use16|use32|use64|heap|stack|entry|local|section|segment|data|end\\s+data|readable|writeable|executable|interpreter|shareable|discardable|notpageable|linkremove|linkinfo|dynamic|note|display|fixups|resource\\s+from|rva|extrn|public|plt)\\b",
       "captures": {
         "1": { "name": "entity.name.function.directives" }
       },
@@ -203,6 +203,30 @@
       "comment": "Decimal numbers"
     },
 
+    { "name": "constant.numeric.float",
+      "match": "\\b([0-9]+f)\\b",
+      "captures": {
+          "1": { "name": "constant.numeric.float" }
+      },
+      "comment": "Float numbers format: 1f"
+    },
+
+    { "name": "constant.numeric.float",
+      "match": "[^\\w\\d]([0-9]+\\.[0-9]+)\\b",
+      "captures": {
+          "1": { "name": "constant.numeric.float" }
+      },
+      "comment": "Float numbers format: 1.0"
+    },
+
+    { "name": "constant.numeric.float",
+      "match": "\\b([0-9]+(e|E)[0-9]+)\\b",
+      "captures": {
+          "1": { "name": "constant.numeric.float" }
+      },
+      "comment": "Float numbers format: 1e0"
+    },
+
     { "name": "constant.numeric.hex",
       "match": "\\b((0x|0X)[0-9a-fA-F]+)\\b",
       "captures": {
@@ -217,6 +241,15 @@
         "1": { "name": "constant.numeric.hex" }
       },
       "comment": "Exadecimal numbers format: FFh"
+
+    },
+
+    { "name": "constant.numeric.hex",
+      "match": "[^\\w\\d](\\$[0-9a-fA-F]+)\\b",
+      "captures": {
+        "1": { "name": "constant.numeric.hex" }
+      },
+      "comment": "Exadecimal numbers format: $FF"
 
     },
 

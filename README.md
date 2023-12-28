@@ -8,7 +8,7 @@ It's based on the Assembly-x86 package from ljgago (also on [github](https://git
 Install:
   
     cd .config/sublime-text-2/Packages
-    git clone git://github.com/Shirk/Sublime-FASM-x86.git
+    git clone git://github.com/HealsCodes/Sublime-FASM-x86.git
 
 ## Edit:
 
